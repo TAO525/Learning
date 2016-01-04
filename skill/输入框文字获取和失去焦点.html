@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function () {
+           var $input = $("input.text1");
+            textFill($input);
+        });
+
+        function textFill(input){//input is a jquery object
+            var defaultValue = input[0].defaultValue;//change to js object
+            input.focus(function(){
+                if(this.value==defaultValue)
+                    $(this).val("");
+            }).blur(function(){
+                if(this.value.trim()==""){
+                    $(this).val(defaultValue);
+                }
+            });
+        }
+    </script>
+</head>
+<body>
+<input type="text" class="text1" autofocus="true" value="name"/>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        .hover{
+            background:#f60;
+        }
+    </style>
+    <script src="../jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            $("table").on("click","td",function(){
+                $(this).toggleClass("hover");
+            });
+        });
+        /*
+         // 为table里面的td元素绑定click事件，不管td元素是一直存在还是动态创建的
+         // jQuery 1.4.2之前使用的方式
+         $("table").each(function(){
+         　　$("td", this).live("click", function(){
+         　　　　$(this).toggleClass("hover");
+         　　});
+         });
+         // jQuery 1.4.2 使用的方式
+         $("table").delegate("td", "click", function(){
+         　　$(this).toggleClass("hover");
+         });
+         */
+
+    </script>
+</head>
+<body>
+<table >
+    <tr>
+        <td>1111</td>
+        <td>2222</td>
+        <td>3333</td>
+    </tr>
+    <tr>
+        <td>1111</td>
+        <td>2222</td>
+        <td>3333</td>
+    </tr>
+    <tr>
+        <td>1111</td>
+        <td>2222</td>
+        <td>3333</td>
+    </tr>
+</table>
+</body>
+</html>

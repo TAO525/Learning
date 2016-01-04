@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <style>
+        body.large{
+            font-size:20px;
+        }
+        body.large a{
+            font-size:20px;
+            color:red;
+        }
+    </style>
+    <script src="../jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+        $(document).ready(function(){
+            function checkWindowSize(){
+                if($(window).width()>1200){
+                    $('body').addClass('large');
+                }else{
+                    $('body').removeClass('large');
+                }
+            }
+            window.onresize = checkWindowSize;
+//            $(window).resize(checkWindowSize);
+        });
+    </script>
+</head>
+<body>
+<ul>
+    <li><a title="百&#12288;度" target="_blank" href="http://www.baidu.com/index.php?tn=monline_5_dg">百&#12288;度</a></li>
+    <li><a title="Google" target="_blank" href="http://i.firefoxchina.cn/parts/google_rdr.html">Google</a></li>
+    <li><a title="新浪" target="_blank" href="http://www.sina.com.cn/">新浪</a></li>
+</ul>
+</body>
+</html>
