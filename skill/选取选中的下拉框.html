@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+        function getObj(){
+            var $obj = $("#someElement").find("option:selected");
+            alert($obj.text());
+        }
+    </script>
+</head>
+<body>
+<input type="button" id="send1" value="get" onclick="getObj()"/>
+<select id="someElement">
+    <option>一班</option>
+    <option>二班</option>
+    <option>三班</option>
+</select>
+</body>
+</html>

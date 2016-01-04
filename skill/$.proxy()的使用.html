@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="../jQuery/jquery-1.9.1.min.js" type="text/javascript"></script>
+    <script>
+    </script>
+</head>
+<body>
+<div id="panel" style="display:none">
+    <button>Close</button>
+</div>
+<script>
+    $("#panel").fadeIn(function(){
+        $("button").click($.proxy(function(){
+            // this 指向 #panel
+          $(this).fadeOut();
+        }));
+    });
+</script>
+</body>
+</html>
